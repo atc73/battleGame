@@ -22,18 +22,19 @@ public class Main {
                 int randomRoleId = (int) (Math.random() * Character.NUMBER_OF_ROLES);
 
                 Character character;
+                String name = "Fighter " + i + " : ";
                 switch(randomRaceId) {
                     case Character.ORC_ID:
-                        character = new Orc(randomRoleId);
+                        character = new Orc(randomRoleId, name);
                         break;
                     case Character.HUMAN_ID:
-                        character = new Human(randomRoleId);
+                        character = new Human(randomRoleId, name);
                         break;
                     case Character.ELF_ID:
-                        character = new Elf(randomRoleId);
+                        character = new Elf(randomRoleId, name);
                         break;
                     default:
-                        character = new Elf(randomRoleId);
+                        character = new Elf(randomRoleId, name);
                 }
 
                 characters[i] = character;
@@ -54,7 +55,9 @@ public class Main {
             Character fighter2 = arena[randomFighterIndex2];
 
             System.out.println("\n Combat : " + (i + 1));
+            fighter1.shout();
             fighter1.displayDetails();
+            fighter2.shout();
             fighter2.displayDetails();
             System.out.println("COMBAT EN COURS");
             fight(fighter1, fighter2);

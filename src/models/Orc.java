@@ -2,12 +2,13 @@ package models;
 
 public class Orc extends Character implements Healer, Striker {
 
-    public Orc(int roleId) {
+    public Orc(int roleId, String name) {
         maxHealth = 10;
         healingPower = 3;
         damagePower = 3;
         health = maxHealth;
         this.roleId = roleId;
+        this.name = name;
     }
 
     @Override
@@ -17,7 +18,7 @@ public class Orc extends Character implements Healer, Striker {
 
     @Override
     public String getRaceString() {
-        return "orque";
+        return "Orque";
     }
 
 

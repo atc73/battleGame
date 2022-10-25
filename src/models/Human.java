@@ -2,13 +2,15 @@ package models;
 
 public class Human extends Character implements Healer, Striker{
 
-    public Human(int roleId) {
+    public Human(int roleId, String name) {
         maxHealth = 12;
         healingPower = 2;
         damagePower = 2;
         health = maxHealth;
         this.roleId = roleId;
+        this.name = name;
     }
+
 
     @Override
     public void shout() {
@@ -24,7 +26,7 @@ public class Human extends Character implements Healer, Striker{
 
     @Override
     public String getRaceString() {
-        return "humain";
+        return "Humain";
     }
 
     @Override

@@ -12,6 +12,8 @@ public abstract class Character {
 
     protected int roleId;
 
+    protected String name;
+
     //Nombre total de races
     public static final int NUMBER_OF_RACES = 3;
 
@@ -37,8 +39,9 @@ public abstract class Character {
     }
 
     public void displayDetails () {
-        System.out.print("Je suis un " + getRaceString() + " - ");
-        System.out.println("Je suis un " + getRoleString());
+        System.out.print(this.name);
+        System.out.print("Je suis un " + getRaceString() + " et ");
+        System.out.println("je suis un " + getRoleString());
         System.out.println("J'ai " + this.getHealth() + " PV");
     }
 

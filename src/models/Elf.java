@@ -3,12 +3,13 @@ package models;
 public class Elf extends Character implements Striker, Healer {
 
 
-    public Elf(int roleId) {
+    public Elf(int roleId, String name) {
         maxHealth = 14;
         healingPower = 2;
         damagePower = 2;
         health = maxHealth;
         this.roleId = roleId;
+        this.name = name;
     }
 
     @Override
@@ -25,7 +26,7 @@ public class Elf extends Character implements Striker, Healer {
 
     @Override
     public String getRaceString() {
-        return "elf";
+        return "Elf";
     }
 
     @Override

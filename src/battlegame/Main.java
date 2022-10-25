@@ -1,9 +1,9 @@
 package battlegame;
 
 import models.Character;
-import models.Elf;
-import models.Human;
-import models.Orc;
+import models.races.Elf;
+import models.races.Human;
+import models.races.Orc;
 
 public class Main {
 

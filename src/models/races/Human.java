@@ -1,6 +1,10 @@
-package models;
+package models.races;
 
-public class Human extends Character implements Healer, Striker{
+import models.Character;
+import models.roles.Healer;
+import models.roles.Striker;
+
+public class Human extends Character implements Healer, Striker {
 
     public Human(int roleId, String name) {
         maxHealth = 12;

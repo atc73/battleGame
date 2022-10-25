@@ -1,4 +1,8 @@
-package models;
+package models.races;
+
+import models.Character;
+import models.roles.Healer;
+import models.roles.Striker;
 
 public class Elf extends Character implements Striker, Healer {
 

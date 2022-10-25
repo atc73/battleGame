@@ -1,4 +1,8 @@
-package models;
+package models.races;
+
+import models.Character;
+import models.roles.Healer;
+import models.roles.Striker;
 
 public class Orc extends Character implements Healer, Striker {
 
